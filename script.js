@@ -37,10 +37,9 @@ console.error("Failed to load playlists:", err);
     const tile = document.createElement("div");
     tile.className = "playlist-cards";
     tile.innerHTML = `
+      <div class = "image-wrapper">
         <img src="${pl.playlist_art}" alt="${pl.playlist_name}">
-        <h2>${pl.playlist_name}</h2>
-        <p>By ${pl.playlist_creator}</p>
-        <div class ="options gradient-overlay">
+         <div class ="options gradient-overlay">
             <span class="play">&#9654;</span>
                <div class = "likes">
                   <span class="like-icon">&#x2665;</span>
@@ -48,6 +47,9 @@ console.error("Failed to load playlists:", err);
                </div>
             <span class = "more">&#x2026;</span>
          </div>
+      </div>
+      <h2>${pl.playlist_name}</h2>
+      <p>By ${pl.playlist_creator}</p>
       `;
 
    // in each card/playlist, toggle like/unlike
@@ -71,11 +73,16 @@ console.error("Failed to load playlists:", err);
    tile.querySelector(".more").addEventListener("click", (e) => {
       openModal(pl);
    });
+   tile.querySelector(".image-wrapper").addEventListener("click", (e) => {
+      openModal(pl);
+   });
 }
 
 // 3) Populate and show modal
 function openModal(pl) {
    modalArt.src = pl.playlist_art;
+   modalArt.style.width = "100%";
+   modalArt.style.height = "20vw";
    modalName.textContent = pl.playlist_name;
    modalAuthor.textContent = "By " + pl.playlist_creator;
    modalSongs.innerHTML = "";
@@ -153,12 +160,17 @@ function featuredPage(){
       sessionStorage.setItem("lastFeaturedIndex", randomIndex);
 
       const pl = data.playlists[randomIndex];
+      const art = document.getElementById("playlist_art");
+         art.src = pl.playlist_art;
+         art.style.width = "100%";
+         art.style.height = "40vw";
 
-
-      document.getElementById("playlist_art").src = pl.playlist_art;
-      document.getElementById("playlist_name").textContent = pl.playlist_name;
+      const name = document.getElementById("playlist_name")
+         name.textContent = pl.playlist_name;
+         name.style.textAlign = "center";
 
       const songs = document.getElementById("songs");
+         songs.style.width = "50vw";
       songs.innerHTML = "";
       pl.songs.forEach((s) => {
         const li = document.createElement("li");
@@ -167,9 +179,9 @@ function featuredPage(){
          const img = document.createElement("img");
          img.src = s.cover_art;
          img.alt = s.title + " cover art";
-         img.style.width = "40px"; 
+         img.style.width = "10%"; 
          // optional styling
-         img.style.height = "40px";
+         img.style.height = "100%";
          img.style.marginRight = "8px";
          img.style.verticalAlign = "middle";
 

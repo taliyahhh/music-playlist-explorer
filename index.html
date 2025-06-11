@@ -11,10 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lexend+Exa:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+
+    </style>
+
 </head>
 <body>
     <header>
-        <h1>Music Playlist Explore</h1>
+        <h1>MUSIC PLAYLIST EXPLORER</h1>
+        <a href = "featured.html" id = "featureBtn">Featured</a>
+        |
+        <a href = "index.html">Home</a>
     </header>
 
     <main> 
@@ -32,7 +40,7 @@
                 <div id = "playlistinfo">
                     <h1 id="playlist_name"></h1>
                     <p id="playlist_creator"></p>
-                    <button id = "shuffle">Shuffle</button>
+                    <span id = "shuffle"><i class="fas fa-random"></i>  Shuffle</span>
                 </div>
                 
                 <div id="songs">
@@ -41,11 +49,10 @@
             </div>
         </div>
     </main>
-    <button id = "featureBtn"><a href = "featured.html">Featured</a></button>
 
     <footer>
         <!-- Your footer content here -->
-         This is the footer
+         Thanks for listening!
     </footer>
     <script src="script.js">
     </script>

@@ -51,7 +51,7 @@
      },
      {
        "playlistID": 1,
-       "playlist_name": "That Summer '16 Feeling",
+       "playlist_name": "Summer 2016",
        "playlist_creator": "Groove Guardian",
        "playlist_art": "https://picsum.photos/id/117/200",
        "likeCount": 4,
@@ -100,50 +100,50 @@
      },
      {
        "playlistID": 2,
-       "playlist_name": "Workout Beats",
-       "playlist_creator": "Harmony Herald",
-       "playlist_art": "https://picsum.photos/id/1077/200",
+       "playlist_name": "different",
+       "playlist_creator": "t dizzle",
+       "playlist_art": "/assets/img/different.jpg",
        "likeCount": 65,
        "songs": [
          {
            "songId": 10,
-           "title": "Eye of the Tiger",
-           "artist": "Survivor",
-           "album": "Eye of the Tiger",
-           "cover_art": "https://picsum.photos/id/593/200",
-           "duration": "4:05"
+           "title": "Please Do Not Lean",
+           "artist": "Daniel Ceasar, BADBADNOTGOOD",
+           "album": "NEVER ENOUGH(Bonus Version)",
+           "cover_art": "/assets/img/neverenough.png",
+           "duration": "4:01"
          },
          {
            "songId": 11,
-           "title": "Stronger",
-           "artist": "Kanye West",
-           "album": "Graduation",
-           "cover_art": "https://picsum.photos/id/169/200",
-           "duration": "5:12"
+           "title": "COMPLEXITIES",
+           "artist": "Daniel Caesar",
+           "album": "CASE STUDY 01",
+           "cover_art": "/assets/img/complexities.png",
+           "duration": "3:51"
          },
          {
            "songId": 12,
-           "title": "Lose Yourself",
-           "artist": "Eminem",
-           "album": "8 Mile Soundtrack",
-           "cover_art": "https://picsum.photos/id/171/200",
-           "duration": "5:26"
+           "title": "Give You The World",
+           "artist": "Steve",
+           "album": "Gemini Rights",
+           "cover_art": "/assets/img/world.png",
+           "duration": "4:33"
          },
          {
            "songId": 13,
-           "title": "Uptown Funk",
-           "artist": "Mark Ronson ft. Bruno Mars",
-           "album": "Uptown Special",
-           "cover_art": "https://picsum.photos/id/274/200",
-           "duration": "4:30"
+           "title": "Me And Your Mama",
+           "artist": "Childish Gambino",
+           "album": "'Awaken, My Love!'",
+           "cover_art": "/assets/img/awaken.png",
+           "duration": "6:19"
          },
          {
            "songId": 14,
-           "title": "Can't Stop the Feeling!",
-           "artist": "Justin Timberlake",
-           "album": "Trolls (Original Motion Picture Soundtrack)",
-           "cover_art": "https://picsum.photos/id/304/200",
-           "duration": "3:56"
+           "title": "2AM",
+           "artist": "SZA",
+           "album": "Ctrl(Deluxe)",
+           "cover_art": "/assets/img/ctrl.png",
+           "duration": "4:02"
          }
        ]
      },

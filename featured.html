@@ -13,12 +13,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lexend+Exa:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
         <style>
             body{
+                background-color: black;
+                color: white;
                 display:grid;
                 grid-template-areas:
                 "header header"
                 "featured featured"
                 "featured featured"
                 "footer footer";
+                grid-template-rows: auto 1fr auto;
             }
             #featured{
                 display:grid;
@@ -27,16 +30,57 @@
                 "playlistName songs";
                 justify-content: space-around;
                 grid-area: featured;
-                padding: 10px 10px
+                padding: 10px;
+                margin:auto;
+                width: 90vw;
             }
             #playlist_art{
                 grid-area: playlistArt;
+                display:block;
+                margin-left: 0;
             }
             #playlist_name{
                 grid-area: playlistName;
+                font-size: 3vw;
             }
             #songs{
                 grid-area: songs;
+                margin-top: -4px;
+                margin-left: 10px;
+                padding-left: 0;
+                font-size: 1vw;
+                line-height: 1.5;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+            @media screen and (max-width:796px){
+                #songs{
+                    font-size: 3vw;
+                    min-height: 150px;
+                }
+                #featured{
+                    grid-template-areas:
+                        "playlistArt"
+                        "playlistName"
+                        "songs";
+                    grid-template-columns: 1fr;
+                    margin: 5% auto;
+                    max-width: 600px;
+                }
+                #songs {
+                    margin-left: 3%;
+                    margin-right: auto;
+                    width: 100% !important;
+                }
+                #playlist_art{
+                    max-width: 100% !important;
+                    min-height: 80vw;
+                    margin: 10px;
+                }
+                #playlist_name{
+                    padding-bottom: 20px;
+                }
+
             }
 
         </style>
@@ -44,18 +88,20 @@
     </head>
     <body>
         <header>
-            <h1>Music Playlist Explore</h1>
+            <h1>MUSIC PLAYLIST EXPLORER</h1>
+            <a href = "featured.html" id = "featureBtn">Featured</a>
+            |
+            <a href = "index.html">Home</a>
         </header>
+
 
         <div id = "featured">
             <img src = "" alt = "Playlist Image" id = "playlist_art">
             <h2 id = "playlist_name"></h2>
-            <div id = "songs">
-                Song A
-            </div>
+            <div id = "songs"></div>
         </div>
         <footer>
-            This is the footer
+            Thanks for listening!
         </footer>
         <script src="script.js"></script>
     </body>
