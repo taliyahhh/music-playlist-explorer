@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Music Playlist Explorer</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lexend+Exa:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Music Playlist Explore</h1>
+    </header>
+
+    <main> 
+        <section id = "container">
+        </section>
+
+        <!-- Hover on Playlist -->
+       
+
+        <!-- Modal Structure -->
+        <div id="playlist_modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="playlist_art" src="assets/img/playlist.png" alt="Playlist Image">
+                <div id = "playlistinfo">
+                    <h1 id="playlist_name"></h1>
+                    <p id="playlist_creator"></p>
+                    <button id = "shuffle">Shuffle</button>
+                </div>
+                
+                <div id="songs">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <button id = "featureBtn"><a href = "featured.html">Featured</a></button>
+
+    <footer>
+        <!-- Your footer content here -->
+         This is the footer
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+</html>

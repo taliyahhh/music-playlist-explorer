@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Featured Playlists</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lexend+Exa:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+        <style>
+            body{
+                display:grid;
+                grid-template-areas:
+                "header header"
+                "featured featured"
+                "featured featured"
+                "footer footer";
+            }
+            #featured{
+                display:grid;
+                grid-template-areas:
+                "playlistArt songs"
+                "playlistName songs";
+                justify-content: space-around;
+                grid-area: featured;
+                padding: 10px 10px
+            }
+            #playlist_art{
+                grid-area: playlistArt;
+            }
+            #playlist_name{
+                grid-area: playlistName;
+            }
+            #songs{
+                grid-area: songs;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <header>
+            <h1>Music Playlist Explore</h1>
+        </header>
+
+        <div id = "featured">
+            <img src = "" alt = "Playlist Image" id = "playlist_art">
+            <h2 id = "playlist_name"></h2>
+            <div id = "songs">
+                Song A
+            </div>
+        </div>
+        <footer>
+            This is the footer
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
