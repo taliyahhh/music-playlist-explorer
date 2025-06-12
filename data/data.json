@@ -2,99 +2,99 @@
    "playlists": [
      {
        "playlistID": 0,
-       "playlist_name": "Late Night Drive",
-       "playlist_creator": "Melody Maven",
-       "playlist_art": "https://picsum.photos/id/36/200",
+       "playlist_name": "putting you on",
+       "playlist_creator": "tj",
+       "playlist_art": "assets/img/pyo.jpeg",
        "likeCount": 7,
        "songs": [
          {
            "songId": 0,
-           "title": "Nightcall",
-           "artist": "Kavinsky",
-           "album": "Nightcall",
-           "cover_art": "https://picsum.photos/id/43/200",
+           "title": "Uuuu",
+           "artist": "Steve Lacy",
+           "album": "The Lo-Fis",
+           "cover_art": "assets/img/thelofis.png",
            "duration": "4:18"
          },
          {
            "songId": 1,
-           "title": "Drive",
-           "artist": "The Cars",
-           "album": "Heartbeat City",
-           "cover_art": "https://picsum.photos/id/45/200",
+           "title": "Doctor, My Eyes",
+           "artist": "Khamari",
+           "album": "Head in a Jar",
+           "cover_art": "assets/img/headinajar.png",
            "duration": "3:55"
          },
          {
            "songId": 2,
-           "title": "Cruisin'",
-           "artist": "Smokey Robinson",
-           "album": "One Heartbeat",
-           "cover_art": "https://picsum.photos/id/88/200",
+           "title": "COMPLEXITIES'",
+           "artist": "Daniel Caesar",
+           "album": "CASE STUDY 01",
+           "cover_art": "assets/img/casestudy01.png",
            "duration": "4:30"
          },
          {
            "songId": 3,
-           "title": "Night Moves",
-           "artist": "Bob Seger",
-           "album": "Night Moves",
-           "cover_art": "https://picsum.photos/id/84/200",
-           "duration": "5:25"
+           "title": "Valentina",
+           "artist": "Daniel Caesar",
+           "album": "NEVER ENOUGH",
+           "cover_art": "/assets/img/neverenough.png",
+           "duration": "2:34"
          },
          {
            "songId": 4,
-           "title": "Moonlight Drive",
-           "artist": "The Doors",
-           "album": "Strange Days",
-           "cover_art": "https://picsum.photos/id/122/200",
-           "duration": "3:04"
+           "title": "Please Do Not Lean",
+           "artist": "Daniel Ceasar, BADBADNOTGOOD",
+           "album": "NEVER ENOUGH(Bonus Version)",
+           "cover_art": "/assets/img/neverenough.png",
+           "duration": "4:01"
          }
        ]
      },
      {
        "playlistID": 1,
-       "playlist_name": "Summer 2016",
-       "playlist_creator": "Groove Guardian",
-       "playlist_art": "https://picsum.photos/id/117/200",
+       "playlist_name": "grwm",
+       "playlist_creator": "t dizzle",
+       "playlist_art": "/assets/img/grwm.jpg",
        "likeCount": 4,
        "songs": [
          {
            "songId": 5,
-           "title": "One Dance",
-           "artist": "Drake",
-           "album": "Views",
-           "cover_art": "https://picsum.photos/id/21/200",
+           "title": "For Free",
+           "artist": "DJ Khaled,Drake",
+           "album": "N/A",
+           "cover_art": "/assets/img/forfree.png",
            "duration": "2:53"
          },
          {
            "songId": 6,
-           "title": "Cheap Thrills",
-           "artist": "Sia",
-           "album": "This Is Acting",
-           "cover_art": "https://picsum.photos/id/56/200",
-           "duration": "3:31"
+           "title": "Never Lose Me",
+           "artist": "Flo Milli",
+           "album": "N/A",
+           "cover_art": "/assets/img/neverloseme.png",
+           "duration": "2:05"
          },
          {
            "songId": 7,
-           "title": "Don't Let Me Down",
-           "artist": "The Chainsmokers ft. Daya",
-           "album": "Collage",
-           "cover_art": "https://picsum.photos/id/145/200",
+           "title": "Sunday Service",
+           "artist": "Latto",
+           "album": "Sugar Honey Iced Tea",
+           "cover_art": "/assets/img/latto.png",
            "duration": "3:28"
          },
          {
            "songId": 8,
-           "title": "This Is What You Came For",
-           "artist": "Calvin Harris ft. Rihanna",
-           "album": "This Is What You Came For",
-           "cover_art": "https://picsum.photos/id/160/200",
-           "duration": "3:42"
+           "title": "Clout",
+           "artist": "Offset, Cardi B",
+           "album": "FATHER OF 4",
+           "cover_art": "/assets/img/clout.png",
+           "duration": "3:25"
          },
          {
            "songId": 9,
-           "title": "Ride",
-           "artist": "Twenty One Pilots",
-           "album": "Blurryface",
-           "cover_art": "https://picsum.photos/id/133/200",
-           "duration": "3:34"
+           "title": "679",
+           "artist": "Fetty Wap",
+           "album": "N/A",
+           "cover_art": "/assets/img/679.png",
+           "duration": "3:16"
          }
        ]
      },
@@ -115,11 +115,11 @@
          },
          {
            "songId": 11,
-           "title": "COMPLEXITIES",
+           "title": "COMPLEXITIES'",
            "artist": "Daniel Caesar",
            "album": "CASE STUDY 01",
-           "cover_art": "/assets/img/complexities.png",
-           "duration": "3:51"
+           "cover_art": "assets/img/headinajar.png",
+           "duration": "4:30"
          },
          {
            "songId": 12,
@@ -149,99 +149,99 @@
      },
      {
        "playlistID": 3,
-       "playlist_name": "Road Trip Anthems",
-       "playlist_creator": "Playlist Pioneer",
-       "playlist_art": "https://picsum.photos/id/314/200",
+       "playlist_name": "gospel",
+       "playlist_creator": "t dizzle",
+       "playlist_art": "/assets/img/gospel.jpg",
        "likeCount": 6,
        "songs": [
          {
            "songId": 15,
-           "title": "Life Is a Highway",
-           "artist": "Tom Cochrane",
-           "album": "Mad Mad World",
-           "cover_art": "https://picsum.photos/id/352/200",
-           "duration": "4:26"
+           "title": "I Smile",
+           "artist": "Kirk Franklin",
+           "album": "Hello Fear",
+           "cover_art": "/assets/img/helloFear.png",
+           "duration": "5:08"
          },
          {
            "songId": 16,
-           "title": "Born to Run",
-           "artist": "Bruce Springsteen",
-           "album": "Born to Run",
-           "cover_art": "https://picsum.photos/id/361/200",
+           "title": "Say Yes",
+           "artist": "Michelle Williams & Beyonce",
+           "album": "Journey To Freedom",
+           "cover_art": "assets/img/sayyes.png",
            "duration": "4:30"
          },
          {
            "songId": 17,
-           "title": "Take It Easy",
-           "artist": "Eagles",
-           "album": "Eagles",
-           "cover_art": "https://picsum.photos/id/365/200",
-           "duration": "3:31"
+           "title": "A God Like You",
+           "artist": "Kirk Franklin",
+           "album": "Hello Fear",
+           "cover_art": "/assets/img/helloFear.png",
+           "duration": "6:18"
          },
          {
            "songId": 18,
-           "title": "Route 66",
-           "artist": "Chuck Berry",
-           "album": "Get Your Kicks on Route 66",
-           "cover_art": "https://picsum.photos/id/371/200",
-           "duration": "2:53"
+           "title": "Oh Happy Day",
+           "artist": "The Edwin Hawkins Singers",
+           "album": "Edwin Classics",
+           "cover_art": "/assets/img/ohhappyday.png",
+           "duration": "5:08"
          },
          {
            "songId": 19,
-           "title": "On the Road Again",
-           "artist": "Willie Nelson",
-           "album": "Honeysuckle Rose",
-           "cover_art": "https://picsum.photos/id/382/200",
-           "duration": "2:33"
+           "title": "I Won't Go Back",
+           "artist": "William McDowell",
+           "album": "Arise",
+           "cover_art": "assets/img/iwontgoback.png",
+           "duration": "6:07"
          }
        ]
      },
      {
        "playlistID": 4,
-       "playlist_name": "Boss Chick Energy",
-       "playlist_creator": "Tempo Tactician",
-       "playlist_art": "https://picsum.photos/id/449/200",
+       "playlist_name": "main character",
+       "playlist_creator": "tj",
+       "playlist_art": "/assets/img/lebron.jpg",
        "likeCount": 0,
        "songs": [
          {
            "songId": 20,
-           "title": "Run the World (Girls)",
-           "artist": "Beyoncé",
-           "album": "4",
-           "cover_art": "https://picsum.photos/id/550/200",
+           "title": "Kiss Me",
+           "artist": "Sixpence None The Richer",
+           "album": "N/A",
+           "cover_art": "assets/img/kissme.png",
            "duration": "3:56"
          },
          {
            "songId": 21,
-           "title": "I'm Every Woman",
-           "artist": "Chaka Khan",
-           "album": "Chaka",
-           "cover_art": "https://picsum.photos/id/646/200",
-           "duration": "4:07"
+           "title": "Duvet",
+           "artist": "bôa",
+           "album": "Twilight",
+           "cover_art": "assets/img/duvet.png",
+           "duration": "3:23"
          },
          {
            "songId": 22,
-           "title": "Independent Women, Pt. 1",
-           "artist": "Destiny's Child",
-           "album": "Survivor",
-           "cover_art": "https://picsum.photos/id/660/200",
-           "duration": "3:41"
+           "title": "Beanie",
+           "artist": "Chezile",
+           "album": "N/A",
+           "cover_art": "assets/img/beanie.png",
+           "duration": "2:12"
          },
          {
            "songId": 23,
-           "title": "Confident",
-           "artist": "Demi Lovato",
-           "album": "Confident",
-           "cover_art": "https://picsum.photos/id/680/200",
-           "duration": "3:25"
+           "title": "For the First Time",
+           "artist": "Mac DeMarco",
+           "album": "This Old Dog",
+           "cover_art": "assets/img/forthefirsttime.png",
+           "duration": "3:02"
          },
          {
            "songId": 24,
-           "title": "Feeling Myself",
-           "artist": "Nicki Minaj ft. Beyoncé",
-           "album": "The Pinkprint",
-           "cover_art": "https://picsum.photos/id/822/200",
-           "duration": "3:57"
+           "title": "Moonlight ",
+           "artist": "Mac DeMarco",
+           "album": "This Old Dog",
+           "cover_art": "assets/img/forthefirsttime.png",
+           "duration": "7:52"
          }
        ]
      },
@@ -296,9 +296,9 @@
      },
      {
        "playlistID": 6,
-       "playlist_name": "90's R&B",
-       "playlist_creator": "Vinyl Virtuoso",
-       "playlist_art": "https://picsum.photos/id/815/200",
+       "playlist_name": "you like jazz?",
+       "playlist_creator": "tj",
+       "playlist_art": "/assets/img/jazz.png",
        "likeCount": 0,
        "songs": [
          {
@@ -389,55 +389,6 @@
            "album": "Imagine",
            "cover_art": "https://picsum.photos/id/823/200",
            "duration": "3:04"
-         }
-       ]
-     },
-     {
-       "playlistID": 8,
-       "playlist_name": "Ohh That Baseline",
-       "playlist_creator": "Bassline Buddy",
-       "playlist_art": "https://picsum.photos/id/836/200",
-       "likeCount": 0,
-       "songs": [
-         {
-           "songId": 40,
-           "title": "Another One Bites the Dust",
-           "artist": "Queen",
-           "album": "The Game",
-           "cover_art": "https://picsum.photos/id/839/200",
-           "duration": "3:36"
-         },
-         {
-           "songId": 41,
-           "title": "Billie Jean",
-           "artist": "Michael Jackson",
-           "album": "Thriller",
-           "cover_art": "https://picsum.photos/id/903/200",
-           "duration": "4:54"
-         },
-         {
-           "songId": 42,
-           "title": "Super Freak",
-           "artist": "Rick James",
-           "album": "Street Songs",
-           "cover_art": "https://picsum.photos/id/951/200",
-           "duration": "3:25"
-         },
-         {
-           "songId": 43,
-           "title": "Get Up (I Feel Like Being a Sex Machine)",
-           "artist": "James Brown",
-           "album": "Sex Machine",
-           "cover_art": "https://picsum.photos/id/974/200",
-           "duration": "5:16"
-         },
-         {
-           "songId": 44,
-           "title": "Uptown Funk",
-           "artist": "Mark Ronson ft. Bruno Mars",
-           "album": "Uptown Special",
-           "cover_art": "https://picsum.photos/id/1040/200",
-           "duration": "4:30"
          }
        ]
      }

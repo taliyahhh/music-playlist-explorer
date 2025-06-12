@@ -34,12 +34,21 @@ main {
 header{
     grid-area: header;
     text-align: center;
-    background-color: black;
+    text-shadow:2px 1px rgb(58, 12, 78) 50%;
     color: white;
+    font-size: 14pt;
     font-family: "Lexend Exa", system-ui;
 }
+/* header > a:hover{
+    color: purple;
+} */
 header > a{
     font-family: "Red Hat Display", system-ui;
+}
+.currentPage{
+    border-bottom: 3px solid rgb(85, 0, 114);
+    text-shadow:0 0 5px #ffffffe8,
+    0 0 42px rgb(115, 0, 255);
 }
 
 footer{
@@ -95,7 +104,12 @@ footer{
 .image-wrapper:hover ~.playlist-cards{
     opacity:.5;
 }
-
+.trash{
+    flex: 1;
+    color: white;
+    font-size: 20px;
+    padding-bottom:5px;
+}
 .play, .likes {
     flex: 1;
     color: white;
@@ -109,19 +123,18 @@ footer{
     font-size: 50px;
     font-weight: bold;
     z-index: 3;
-    padding-right:10px;
+    padding-left:10px;
 }
 
-.play:hover{
-    color: rgb(94, 0, 128);
+.play:hover, .trash:hover{
+    color: rgb(72, 0, 97);
     transform: scale(1.3);
     text-decoration: none;
     cursor: pointer;
 }
 .more:hover{
-    padding-right:10px;
     padding-bottom: 5px;
-    color: rgb(94, 0, 128);
+    color: rgb(72, 0, 97);
     transform: scale(1.3);
     text-decoration: none;
     cursor: pointer;
@@ -166,6 +179,7 @@ footer{
     width: 80%; /* Could be more or less, depending on screen size */
     max-height: 90vh;
     overflow-y: auto;    
+    box-shadow: 2px 2px black;
 }
 #playlistinfo{
     padding-left: 10%;
@@ -174,16 +188,6 @@ footer{
 #playlist_art{
     margin-left: 0;
     grid-area:image;
-}
-@media screen and (max-width: 796px){
-    main{
-        grid-template-columns: 1fr;
-    }
-    .playlist-cards{
-        margin: 0 auto;
-        max-width: 300px;
-        margin-left: 20px;
-    }
 }
 
 #songs{
@@ -208,7 +212,7 @@ footer{
 }
 .close {
     color: white;
-    margin-bottom:100%;
+    margin-bottom:60vh;
     margin-left:85%;
     font-size: 28px;
     font-weight: bold;
@@ -233,12 +237,41 @@ a{
     text-decoration: none;
     color: white
 }
-header > a:hover{
-    color: purple;
-}
 #playlist-creator{
     font-family: "Red Hat Display", system-ui;
 }
 h2{
     font-family: "Lexend Exa", system-ui;
+}
+.glow {
+  color: #fff; /*  Set text color  */
+  text-shadow:
+    0 0 5px #ffffffe8,  /*  Inner white glow  */
+    0 0 42px rgba(115, 0, 255, 0.6), /*  Larger colored glow  */
+    0 0 50px rgba(75, 5, 161, 0.5),
+    0 0 0px rgba(32, 1, 70, 0.4)
+}
+@media screen and (max-width: 1000px){
+    #playlist_art{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 796px){
+    main{
+        grid-template-columns: 1fr;
+    }
+    .playlist-cards{
+        margin: 0 auto;
+        max-width: 300px;
+        margin-left: 20px;
+    }
+    .close{
+        margin-bottom:35vh;
+    }
+    #playlist_art{
+        width: 125% !important;
+    }
+    #playlistinfo{
+        margin-left:20px;
+    }
 }

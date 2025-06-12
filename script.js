@@ -1,21 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => { // add event listener when page loads
 
-   if(window.location.pathname.includes("featured.html")){
+   const featuredBtn = document.getElementById("featuredBtn");
+   const homeBtn = document.getElementById("homeBtn");
+
+   // header underline
+   if(window.location.pathname.includes("index.html")){
+      homeBtn.classList.add("currentPage");
+      
+   }else{
       featuredPage();
+      featuredBtn.classList.add("currentPage");
       return;
    }
 
+   let shuffleOrder = null;
+   let currentPlaylistName = null;
+
    const modal = document.getElementById("playlist_modal");
    const container = document.getElementById("container");
-  const modalArt = document.getElementById("playlist_art");
-  const modalName = document.getElementById("playlist_name");
-  const modalAuthor = document.getElementById("playlist_creator");
-  const modalSongs = document.getElementById("songs");
-  const featuredSection = document.getElementById("featured");
+   const modalArt = document.getElementById("playlist_art");
+   const modalName = document.getElementById("playlist_name");
+   const modalAuthor = document.getElementById("playlist_creator");
+   const modalSongs = document.getElementById("songs");
+   let playlistsData = null;
 
-  const closeBtn = modal.querySelector(".close");
-  const shuffleBtn = document.getElementById("shuffle");
-  let currentSongs = [];
+   const closeBtn = modal.querySelector(".close");
+   const shuffleBtn = document.getElementById("shuffle");
+   let currentSongs = [];
+
 
  // 1) Load playlists via fetch().then() chaining
 fetch("data/data.json")
@@ -26,31 +38,34 @@ if (!response.ok) {
 return response.json();
 })
 .then((data) => {
-data.playlists.forEach(createPlaylistTile);
+   playlistsData = data.playlists;
+   data.playlists.forEach(createPlaylistTile);
 })
 .catch((err) => {
-console.error("Failed to load playlists:", err);
+   console.error("Failed to load playlists:", err);
 });
 
  // 2) Create each card
   function createPlaylistTile(pl) {
-    const tile = document.createElement("div");
-    tile.className = "playlist-cards";
-    tile.innerHTML = `
-      <div class = "image-wrapper">
-        <img src="${pl.playlist_art}" alt="${pl.playlist_name}">
-         <div class ="options gradient-overlay">
-            <span class="play">&#9654;</span>
-               <div class = "likes">
-                  <span class="like-icon">&#x2665;</span>
-                  <span class ="like-count">${pl.likeCount}</span>
-               </div>
-            <span class = "more">&#x2026;</span>
-         </div>
+   
+   const tile = document.createElement("div");
+   tile.className = "playlist-cards";
+   tile.innerHTML = `
+   <div class = "image-wrapper">
+      <img src="${pl.playlist_art}" alt="${pl.playlist_name}">
+      <div class ="options gradient-overlay">
+         <span class="play">&#9654;</span>
+            <div class = "likes">
+               <span class="like-icon">&#x2665;</span>
+               <span class ="like-count">${pl.likeCount}</span>
+            </div>
+         <span class = "more">&#x2026;</span>
+         <span class = "trash"><i class="fa-solid fa-trash-can"></i></span>
       </div>
-      <h2>${pl.playlist_name}</h2>
-      <p>By ${pl.playlist_creator}</p>
-      `;
+   </div>
+   <h2>${pl.playlist_name}</h2>
+   <p>By ${pl.playlist_creator}</p>
+   `;
 
    // in each card/playlist, toggle like/unlike
    const heart = tile.querySelector(".like-icon");
@@ -69,6 +84,28 @@ console.error("Failed to load playlists:", err);
 
    container.appendChild(tile);
 
+   const deletePlaylist = tile.querySelector(".trash");
+   // delete playlist
+   deletePlaylist.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (window.confirm("Are you sure you want to delete this item?")) {
+         // deletes playlist on screen
+         tile.remove();
+
+         // deletes playlist on json file
+         const index = playlistsData.findIndex(p => p.playlist_name === pl.playlist_name);
+         if (index !== -1) {
+            playlistsData.splice(index, 1);  // remove from array
+            console.log(`Playlist "${pl.playlist_name}" deleted.`);
+         }
+         // displays succesfull playlist deletion
+         console.log("Playlist Deleted");
+      } else {
+         // displays cancellation of playlist deletion
+         console.log("No Changes Saved");
+      }
+   })
+
    // open modal when clicking the more button
    tile.querySelector(".more").addEventListener("click", (e) => {
       openModal(pl);
@@ -82,11 +119,18 @@ console.error("Failed to load playlists:", err);
 function openModal(pl) {
    modalArt.src = pl.playlist_art;
    modalArt.style.width = "100%";
-   modalArt.style.height = "20vw";
+   modalArt.style.height = "40vw";
    modalName.textContent = pl.playlist_name;
    modalAuthor.textContent = "By " + pl.playlist_creator;
+
    modalSongs.innerHTML = "";
-   pl.songs.forEach((s) => {
+
+   if (shuffleOrder && currentPlaylistName === pl.playlist_name) {
+      // Use saved shuffle order: add each saved <li> back to the modal
+      shuffleOrder.forEach(li => modalSongs.appendChild(li));
+      currentSongs = Array.from(modalSongs.children);
+   } else{
+      pl.songs.forEach((s) => {
       const li = document.createElement("li");
 
       // create cover
@@ -106,8 +150,11 @@ function openModal(pl) {
    });
    // stores current songs as <li>
    currentSongs = Array.from(modalSongs.children);
+   shuffleOrder = null;
+   }
 
    // displays songs in ui
+   currentPlaylistName = pl.playlist_name;
    modal.classList.add("show");
 }
 
@@ -124,6 +171,9 @@ function openModal(pl) {
    //update modal
    modalSongs.innerHTML = "";
    currentSongs.forEach(s => modalSongs.appendChild(s));
+
+   // save shuffle order
+   shuffleOrder = [...currentSongs];
 })
 
 // 4) Close handlers
@@ -136,10 +186,8 @@ modal.addEventListener("click", (e) => {
    modal.classList.remove("show");
    }
 });
-   
-})
 
-
+// FEATURED PAGE
 function featuredPage(){
   fetch("data/data.json")
     .then((response) => {
@@ -194,3 +242,4 @@ function featuredPage(){
       console.error("Failed to load featured playlist:", err);
     });
 }
+})
